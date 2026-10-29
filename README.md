@@ -12,6 +12,10 @@ Run `npm start` for a development server. Open `http://localhost:4200/`; the app
 
 Run `npm run build` to create a production build in `dist/freshKart`.
 
+## Deploy to GitHub Pages
+
+The GitHub Actions workflow in `.github/workflows/deploy-pages.yml` builds and deploys the app when changes are pushed to `main` or `master`. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**. You can also start a deployment from the Actions tab with **Deploy FreshKart to GitHub Pages → Run workflow**.
+
 ## Running unit tests
 
 Run `npm test` to execute the unit tests with Vitest.

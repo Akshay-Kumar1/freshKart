@@ -18,7 +18,7 @@
           "builder": "@angular/build:application",
           "options": {
             "outputPath": "dist/freshKart",
-            "index": "src/index.html",
+            "index": "index.html",
             "browser": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
