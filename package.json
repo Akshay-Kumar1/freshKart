@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test freshKart",
-    "github-build": "ng build --configuration production --base-href 'https://<Akshay-Kumar1>.github.io/<repository-name>/'"
+    "github-build": "ng build --configuration production --base-href 'https://Akshay-Kumar1.github.io/freshKart/'"
   },
   "private": true,
   "engines": {
