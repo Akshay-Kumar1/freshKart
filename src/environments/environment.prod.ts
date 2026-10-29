@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  mainUrl: 'https://api.myjson.com/bins/qzuzi'
 };

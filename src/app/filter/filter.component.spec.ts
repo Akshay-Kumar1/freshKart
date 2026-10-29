@@ -1,21 +1,19 @@
-import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 import { FilterComponent } from './filter.component';
+import { translateTestProviders } from '../testing/translate-test.providers';
 
 describe('FilterComponent', () => {
   let component: FilterComponent;
   let fixture: ComponentFixture<FilterComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ FilterComponent ],
-      imports: [RouterTestingModule],
-      schemas: [NO_ERRORS_SCHEMA]
-    })
-    .compileComponents();
-  }));
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [FilterComponent],
+      providers: translateTestProviders
+    }).compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(FilterComponent);
@@ -25,5 +23,20 @@ describe('FilterComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should show items at or below the selected maximum price', () => {
+    component.arrayOfItemsToSort = [
+      { id: 1, discountedPrice: 80 },
+      { id: 2, discountedPrice: 120 }
+    ];
+    component.ngOnInit();
+    component.sliderEvent(100);
+
+    let filteredItems;
+    component.messageEvent.subscribe(items => filteredItems = items);
+    component.filterItems();
+
+    expect(filteredItems).toEqual([{ id: 1, discountedPrice: 80 }]);
   });
 });

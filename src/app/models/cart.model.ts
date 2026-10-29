@@ -7,4 +7,6 @@ export class CartModel {
     category: string = '';
     img_url: string = '';
     discountedPrice: number = 0;
+    quantity: number = 1;
+    translationKey: string = '';
 }

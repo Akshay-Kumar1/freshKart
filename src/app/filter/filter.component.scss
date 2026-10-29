@@ -1,24 +1,54 @@
-.filter_button {
-    width: 100px;
-    height: 35px;
-    border: none;
-    outline: none;
-    background-color: #009ade;
-    border-radius: 20px;
-    color: #fff;
-    cursor: pointer;
+.padding_filter {
+  color: #29343d;
 }
+
 .bold {
-    font-weight: bold;
+  font-size: 16px;
+  font-weight: 750;
+  margin: 0 0 22px;
 }
 
 .slidecontainer {
-    width: 100%;
-    margin-bottom: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.price-range-label {
+  color: #78838b;
+  display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.price-range {
+  accent-color: #f06437;
+  cursor: pointer;
+  width: 100%;
+}
+
+.filter_button {
+  background: #fff1eb;
+  border: 0;
+  border-radius: 9px;
+  color: #e85c32;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 750;
+  height: 40px;
+  transition: background .2s ease;
+  width: 100%;
+}
+
+.filter_button:hover {
+  background: #ffe4d8;
+}
+
+@media (max-width: 680px) {
+  .bold {
+    margin-bottom: 12px;
   }
-  @media only screen and (max-width: 767px) {
-    .slidecontainer {
-      width: auto;
-      margin: 0 7%;
-    }
+
+  .slidecontainer {
+    margin-bottom: 12px;
   }
+}

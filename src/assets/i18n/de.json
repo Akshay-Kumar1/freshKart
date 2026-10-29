@@ -1,0 +1,89 @@
+{
+  "app": {
+    "title": "FreshKart | Jeden Tag Lieblingsprodukte",
+    "description": "Entdecke deine Favoriten für jeden Tag und köstliche Produkte bei FreshKart."
+  },
+  "header": {
+    "homeLabel": "FreshKart Startseite",
+    "brandFirst": "fresh",
+    "brandAccent": "Kart",
+    "cart": "Mein Warenkorb",
+    "language": "Sprache",
+    "cartItemCount": "{{count}} Artikel im Warenkorb"
+  },
+  "catalogue": {
+    "shopCollection": "Sortiment entdecken",
+    "discoverSomething": "Entdecke etwas Leckeres",
+    "discountOff": "{{discount}} % Rabatt",
+    "addToCart": "In den Warenkorb",
+    "noFavourites": "Noch keine Favoriten gefunden",
+    "adjustFilters": "Passe deine Filter an, um weitere Leckereien zu entdecken."
+  },
+  "filter": {
+    "title": "Filter",
+    "maximumPrice": "Höchstpreis: ₹{{value}}",
+    "apply": "Filter anwenden"
+  },
+  "sort": {
+    "title": "Sortieren nach",
+    "highToLow": "Preis: absteigend",
+    "lowToHigh": "Preis: aufsteigend",
+    "discount": "Rabatt"
+  },
+  "cart": {
+    "eyebrow": "DEINE LECKEREIEN",
+    "title": "Dein Warenkorb",
+    "intro": "Fast geschafft – deine Favoriten warten schon.",
+    "removeItem": "Artikel entfernen",
+    "priceDetails": "PREISDETAILS",
+    "priceForItems": "Preis ({{count}} Artikel)",
+    "quantity": "Menge: {{count}}",
+    "increaseQuantity": "Menge erhöhen",
+    "decreaseQuantity": "Menge verringern",
+    "discount": "Rabatt",
+    "totalPayable": "Zu zahlender Gesamtbetrag",
+    "payNow": "Jetzt bezahlen",
+    "emptyTitle": "Dein Warenkorb ist noch leer!",
+    "emptyDescription": "Entdecke Snacks und Dinge des täglichen Bedarfs, die du liebst.",
+    "addItems": "Artikel hinzufügen"
+  },
+  "carousel": {
+    "ariaLabel": "FreshKart Angebote",
+    "roleDescription": "Karussell",
+    "shopFavourites": "Favoriten entdecken",
+    "previousBanner": "Vorheriges Banner",
+    "nextBanner": "Nächstes Banner",
+    "chooseBanner": "Banner auswählen",
+    "showBanner": "Banner {{number}} anzeigen",
+    "slides": [
+      {
+        "eyebrow": "GUTES ESSEN, GUTE LAUNE",
+        "title": "Ein bisschen Freude",
+        "highlight": "in jedem Bissen.",
+        "description": "Mach jeden Moment süßer mit einer Leckerei zum Teilen.",
+        "imageAlt": "Cadbury Celebrations Schokoladengeschenkbox"
+      },
+      {
+        "eyebrow": "JETZT WIRD'S KNUSPRIG",
+        "title": "Knabbere mit Freude.",
+        "highlight": "Eine Prise Schärfe.",
+        "description": "Dein knuspriger Lieblingssnack ist immer eine gute Idee.",
+        "imageAlt": "Kurkure Masala Munch Snackpackung"
+      },
+      {
+        "eyebrow": "SCHNELL, LECKER, EINFACH",
+        "title": "Wohltuend und",
+        "highlight": "in Minuten fertig.",
+        "description": "Hol dir einen schnellen Favoriten für deine nächste Pause.",
+        "imageAlt": "Maggi-Nudelpackung"
+      }
+    ]
+  },
+  "products": {
+    "kurkure": "Kurkure",
+    "kitkat": "Kitkat",
+    "celebrations": "Cadbury Celebrations",
+    "maggi": "Maggi",
+    "iphone": "iPhone 13 Pro Max 128 GB"
+  }
+}

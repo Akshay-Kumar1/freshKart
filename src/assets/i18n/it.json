@@ -1,0 +1,89 @@
+{
+  "app": {
+    "title": "FreshKart | I preferiti di ogni giorno",
+    "description": "Scopri i tuoi prodotti preferiti e le delizie di ogni giorno su FreshKart."
+  },
+  "header": {
+    "homeLabel": "Homepage FreshKart",
+    "brandFirst": "fresh",
+    "brandAccent": "Kart",
+    "cart": "Il mio carrello",
+    "language": "Lingua",
+    "cartItemCount": "{{count}} articoli nel carrello"
+  },
+  "catalogue": {
+    "shopCollection": "Scopri la collezione",
+    "discoverSomething": "Scopri qualcosa di delizioso",
+    "discountOff": "{{discount}}% di sconto",
+    "addToCart": "Aggiungi al carrello",
+    "noFavourites": "Non hai ancora trovato i tuoi preferiti",
+    "adjustFilters": "Modifica i filtri per scoprire altre deliziose opzioni."
+  },
+  "filter": {
+    "title": "Filtri",
+    "maximumPrice": "Prezzo massimo: ₹{{value}}",
+    "apply": "Applica filtri"
+  },
+  "sort": {
+    "title": "Ordina per",
+    "highToLow": "Prezzo: dal più alto al più basso",
+    "lowToHigh": "Prezzo: dal più basso al più alto",
+    "discount": "Sconto"
+  },
+  "cart": {
+    "eyebrow": "LE TUE PRELIBATEZZE",
+    "title": "Il tuo carrello",
+    "intro": "Ci sei quasi: i tuoi preferiti ti aspettano.",
+    "removeItem": "Rimuovi articolo",
+    "priceDetails": "DETTAGLI DEL PREZZO",
+    "priceForItems": "Prezzo ({{count}} articoli)",
+    "quantity": "Qtà: {{count}}",
+    "increaseQuantity": "Aumenta la quantità",
+    "decreaseQuantity": "Diminuisci la quantità",
+    "discount": "Sconto",
+    "totalPayable": "Totale da pagare",
+    "payNow": "Paga ora",
+    "emptyTitle": "Il carrello è vuoto!",
+    "emptyDescription": "Scopri snack e prodotti essenziali che ami.",
+    "addItems": "Aggiungi articoli"
+  },
+  "carousel": {
+    "ariaLabel": "Offerte FreshKart",
+    "roleDescription": "carosello",
+    "shopFavourites": "Scopri i preferiti",
+    "previousBanner": "Banner precedente",
+    "nextBanner": "Banner successivo",
+    "chooseBanner": "Scegli un banner",
+    "showBanner": "Mostra banner {{number}}",
+    "slides": [
+      {
+        "eyebrow": "BUON CIBO, BUON UMORE",
+        "title": "Un pizzico di gioia",
+        "highlight": "in ogni morso.",
+        "description": "Rendi più dolci i tuoi momenti con una delizia da condividere.",
+        "imageAlt": "Confezione regalo di cioccolatini Cadbury Celebrations"
+      },
+      {
+        "eyebrow": "VIA ALLA CROCCANTEZZA",
+        "title": "Sgranocchia felice.",
+        "highlight": "Un tocco piccante.",
+        "description": "Il tuo snack croccante preferito è sempre una buona idea.",
+        "imageAlt": "Confezione di snack Kurkure Masala Munch"
+      },
+      {
+        "eyebrow": "VELOCE, GUSTOSO, FACILE",
+        "title": "Tutto il comfort",
+        "highlight": "pronto in pochi minuti.",
+        "description": "Fai scorta di un prodotto preferito per la tua prossima pausa.",
+        "imageAlt": "Confezione di noodles Maggi"
+      }
+    ]
+  },
+  "products": {
+    "kurkure": "Kurkure",
+    "kitkat": "Kitkat",
+    "celebrations": "Cadbury Celebrations",
+    "maggi": "Maggi",
+    "iphone": "iPhone 13 Pro Max 128 GB"
+  }
+}

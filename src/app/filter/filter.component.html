@@ -1,7 +1,11 @@
 <section class="padding_filter">
-  <p class="bold">Filters</p>
+  <p class="bold">{{ 'filter.title' | translate }}</p>
   <div class="slidecontainer">
-    <ng5-slider [(ngModel)]="value" [options]="options" (ngModelChange)="sliderEvent($event)"></ng5-slider>
+    <label class="price-range-label" for="maximum-price">
+      {{ 'filter.maximumPrice' | translate:{value: value} }}
+    </label>
+    <input id="maximum-price" class="price-range" type="range" min="0" max="600" step="10"
+      [(ngModel)]="value" (ngModelChange)="sliderEvent($event)">
   </div>
-  <button class="filter_button"(click)="filterItems()">Apply</button>
+  <button class="filter_button" (click)="filterItems()">{{ 'filter.apply' | translate }}</button>
 </section>

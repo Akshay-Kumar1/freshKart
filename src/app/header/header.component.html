@@ -1,17 +1,29 @@
 <header>
   <div class="header">
-    <div class="icons_left">
-      <span>
-        <img class="svg_icon" src="../../assets/_ionicons_svg_md-star.svg" alt="star_logo">
+    <a class="brand" routerLink="/catalogue" [attr.aria-label]="'header.homeLabel' | translate">
+      <span class="brand_mark">
+        <img class="svg_icon" src="../../assets/_ionicons_svg_md-star.svg" alt="">
       </span>
-    </div>
-    <div class="icons_right">
-      <span class="icons_gap">
-        <img class="svg_icon" src="../../assets/_ionicons_svg_md-search.svg" alt="search_icon">
+      <span>{{ 'header.brandFirst' | translate }}<span class="brand_accent">{{ 'header.brandAccent' | translate }}</span></span>
+    </a>
+    <div class="header_actions">
+      <span class="search_icon" aria-hidden="true">
+        <img class="svg_icon" src="../../assets/_ionicons_svg_md-search.svg" alt="">
       </span>
-      <span class="icons_gap" routerLink="/cart">
-        <img class="svg_icon" src="../../assets/_ionicons_svg_md-cart.svg" alt="cart_icon">
-      </span>
+      <a class="cart_link" routerLink="/cart">
+        <img class="svg_icon" src="../../assets/_ionicons_svg_md-cart.svg" alt="">
+        <span>{{ 'header.cart' | translate }}</span>
+        <span class="cart-count" [attr.aria-label]="'header.cartItemCount' | translate:{count: (cartItemCount$ | async)}">
+          {{ cartItemCount$ | async }}
+        </span>
+      </a>
+      <label class="language-picker">
+        <span class="visually-hidden">{{ 'header.language' | translate }}</span>
+        <select [value]="selectedLanguage" (change)="changeLanguage($event)"
+          [attr.aria-label]="'header.language' | translate">
+          <option *ngFor="let language of languages" [value]="language.code">{{ language.name }}</option>
+        </select>
+      </label>
     </div>
   </div>
 </header>

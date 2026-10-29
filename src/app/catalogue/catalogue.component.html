@@ -1,29 +1,53 @@
-<app-sort [arrayOfItemsToSort] = 'arrayOfItems' (messageEvent)="receiveMessage($event)"></app-sort>
-<div class="sideBar">
-  <app-filter [arrayOfItemsToSort] = 'arrayOfItems' (messageEvent)="receiveMessage($event)" (filterEvent)="filterStatus($event)"></app-filter>
-</div>
-<div class="main" *ngIf="catalogueLoading === false">
-  <div class="mobile_width" *ngFor="let items of arrayOfItems">
-      <img src="{{items.img_url}}" alt="image" class="image_size">
-      <div class="item_details">
-        <p class="no_margin_name" [innerHTML]="items.name"></p>
-        <div class="display_price">
-          <p><em class="fa font-size">&#xf156;</em>
-            <strong [innerHTML]="items.discountedPrice" class="margin_gap">
-            </strong>
-          </p>
-          <p *ngIf="items.discount != 0"><em class="fa items_details">&#xf156;</em>
-            <del [innerHTML]="items.price" class="margin_gap"></del>
-          </p>
-          <p *ngIf="items.discount != 0" class="discount_font_color">{{items.discount}}% off</p>
+<main class="catalog-page">
+  <carousel></carousel>
+
+  <div class="catalog-layout">
+    <aside class="filter-panel">
+      <app-filter [arrayOfItemsToSort] = 'arrayOfItems' (messageEvent)="receiveMessage($event)" (filterEvent)="filterStatus($event)"></app-filter>
+    </aside>
+    <section class="catalog-content">
+      <div class="catalog-toolbar">
+        <div>
+          <h2>{{ 'catalogue.shopCollection' | translate }}</h2>
+          <p>{{ 'catalogue.discoverSomething' | translate }}</p>
         </div>
-        <div class="buttonAlign">
-          <button class="cta_addToCart" (click)="addToCart(items.id)">{{buttonName}}</button>
-        </div>
+        <app-sort [arrayOfItemsToSort] = 'arrayOfItems' (messageEvent)="receiveMessage($event)"></app-sort>
       </div>
+      <div class="product-grid" id="products" *ngIf="catalogueLoading === false">
+        <article class="product-card" *ngFor="let items of arrayOfItems">
+          <div class="product-image-wrap">
+            <span class="discount-badge" *ngIf="items.discount != 0">
+              {{ 'catalogue.discountOff' | translate:{discount: items.discount} }}
+            </span>
+            <img [src]="items.img_url" [alt]="items.translationKey | translate" class="product-image">
+          </div>
+          <div class="product-details">
+            <p class="product-name">{{ items.translationKey | translate }}</p>
+            <div class="price-row">
+              <span class="product-price"><em class="fa">&#xf156;</em>{{items.discountedPrice}}</span>
+              <del *ngIf="items.discount != 0" class="original-price"><em class="fa">&#xf156;</em>{{items.price}}</del>
+            </div>
+            <div class="catalogue-quantity" *ngIf="getQuantity(items.id) > 0; else addToCartButton">
+              <button type="button" class="quantity-button" (click)="decreaseQuantity(items.id)"
+                [attr.aria-label]="'cart.decreaseQuantity' | translate">−</button>
+              <span class="quantity-value" aria-live="polite">{{ getQuantity(items.id) }}</span>
+              <button type="button" class="quantity-button" (click)="addToCart(items.id)"
+                [attr.aria-label]="'cart.increaseQuantity' | translate">+</button>
+            </div>
+            <ng-template #addToCartButton>
+              <button class="cta_addToCart" (click)="addToCart(items.id)">
+                {{ 'catalogue.addToCart' | translate }} <span aria-hidden="true">+</span>
+              </button>
+            </ng-template>
+          </div>
+        </article>
+      </div>
+      <div class="noFilter_text" *ngIf="noFilteredItems === true && catalogueLoading === false">
+        <span class="empty-icon">⌕</span>
+        <strong>{{ 'catalogue.noFavourites' | translate }}</strong>
+        <span>{{ 'catalogue.adjustFilters' | translate }}</span>
+      </div>
+      <div *ngIf="catalogueLoading === true" class="loader loader_alignment"></div>
+    </section>
   </div>
-</div>
-<div class="noFilter_text" *ngIf="noFilteredItems === true && catalogueLoading === false">
-  Uh oh ! No items for the applied filter !
-</div>
-<div *ngIf="catalogueLoading === true" class="loader loader_alignment"></div>
+</main>

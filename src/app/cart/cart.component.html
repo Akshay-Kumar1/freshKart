@@ -1,37 +1,67 @@
-<section class="display_cart" *ngIf='cartLoading === false'>
-  <div class="cart_blocks" *ngFor="let item of cartArray">
-    <img class="img_size" src="{{item.img_url}}" alt="item_image">
-    <div class="cart_price">
-      <div class="price_align">
-        {{item.name}}
-      </div>
-      <div class="price_align">
-        <em class="fa items_details">&#xf156;</em><span class="font_weight">{{item.discountedPrice}}</span>
-        <del *ngIf="item.discount != 0" class="margin_left">{{item.price}}</del>
-        <span *ngIf="item.discount != 0" class="discount_font_color margin_left">{{item.discount}}% off</span>
-      </div>
-    </div>
-    <div class="remove_button">
-      <button class="cta_addToCart" (click)="removeItem(item.id)">Remove</button>
-    </div>
+<main class="cart-page">
+  <div class="cart-heading">
+    <p class="eyebrow">{{ 'cart.eyebrow' | translate }}</p>
+    <h1>{{ 'cart.title' | translate }}</h1>
+    <p>{{ 'cart.intro' | translate }}</p>
   </div>
-  <div *ngFor="let item of cartArray" class="price_details">
-    <p class="price_details_right">{{priceDetails}}</p>
-    <div class="margin_top_price">
-      <div class="price_margin">
-        Price (1) item : <em class="fa items_details">&#xf156;</em>{{item.price}}
-      </div>
-      <div class="price_margin">
-        Discount : <em class="fa items_details">&#xf156;</em>{{item.discountAmount}}
-      </div>
-      <div class="price_margin_payable">
-        <p>Total Payable : <em class="fa items_details">&#xf156;</em>{{item.discountedPrice}}</p>
+  <section class="display_cart" *ngIf="cartArray.length > 0">
+    <div class="cart_items">
+      <div class="cart_blocks" *ngFor="let item of cartArray">
+        <img class="img_size" [src]="item.img_url" [alt]="item.translationKey | translate">
+        <div class="cart_price">
+          <div class="price_align product-title">{{item.translationKey | translate}}</div>
+          <div class="price_align">
+            <span class="font_weight"><em class="fa items_details">&#xf156;</em>{{item.discountedPrice}}</span>
+            <del *ngIf="item.discount != 0" class="margin_left"><em class="fa items_details">&#xf156;</em>{{item.price}}</del>
+            <span *ngIf="item.discount != 0" class="discount_font_color margin_left">
+              {{ 'catalogue.discountOff' | translate:{discount: item.discount} }}
+            </span>
+          </div>
+          <div class="cart-quantity">
+            <button type="button" class="quantity-button" (click)="decreaseQuantity(item.id)"
+              [attr.aria-label]="'cart.decreaseQuantity' | translate">−</button>
+            <span class="quantity-value" aria-live="polite">
+              {{ 'cart.quantity' | translate:{count: item.quantity} }}
+            </span>
+            <button type="button" class="quantity-button" (click)="addQuantity(item.id)"
+              [attr.aria-label]="'cart.increaseQuantity' | translate">+</button>
+          </div>
+          <button class="remove_button" type="button" (click)="removeItem(item.id)"
+            [attr.aria-label]="'cart.removeItem' | translate" [title]="'cart.removeItem' | translate">
+            <svg class="trash-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M4 7h16M10 11v6m4-6v6M5.5 7l1 14h11l1-14M9 7V4h6v3"
+                fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="1.8"></path>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="empty_cart_message" *ngIf="removeCart === true && loading === false">
-  <p>{{cartMessage}}</p>
-  <button class="cta_addToCart" (click)="redirectToCatalogue()">{{addItemToCartButton}}</button>
-</section>
-<div *ngIf="loading === true || cartLoading === true" class="loader loader_alignment"></div>
+    <div class="price_details">
+      <p class="price_details_right">{{ 'cart.priceDetails' | translate }}</p>
+      <div class="margin_top_price">
+        <div class="price_margin">
+          {{ 'cart.priceForItems' | translate:{count: cartItemCount} }}
+          <span><em class="fa items_details">&#xf156;</em>{{totalPrice}}</span>
+        </div>
+        <div class="price_margin">
+          {{ 'cart.discount' | translate }}
+          <span><em class="fa items_details">&#xf156;</em>{{totalDiscount}}</span>
+        </div>
+        <div class="price_margin_payable">
+          <p>{{ 'cart.totalPayable' | translate }}
+            <span><em class="fa items_details">&#xf156;</em>{{totalPayable}}</span>
+          </p>
+        </div>
+        <button class="pay-now-button" type="button">{{ 'cart.payNow' | translate }}</button>
+      </div>
+    </div>
+  </section>
+  <section class="empty_cart_message" *ngIf="cartArray.length === 0 && loading === false">
+    <span class="empty-cart-icon">♡</span>
+    <h2>{{ 'cart.emptyTitle' | translate }}</h2>
+    <p>{{ 'cart.emptyDescription' | translate }}</p>
+    <button class="cta_addToCart" (click)="redirectToCatalogue()">{{ 'cart.addItems' | translate }}</button>
+  </section>
+</main>
+<div *ngIf="loading === true" class="loader loader_alignment"></div>

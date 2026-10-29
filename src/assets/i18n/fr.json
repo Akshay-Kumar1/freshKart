@@ -1,0 +1,89 @@
+{
+  "app": {
+    "title": "FreshKart | Vos favoris au quotidien",
+    "description": "Retrouvez vos produits préférés et de délicieuses essentiels du quotidien chez FreshKart."
+  },
+  "header": {
+    "homeLabel": "Accueil FreshKart",
+    "brandFirst": "fresh",
+    "brandAccent": "Kart",
+    "cart": "Mon panier",
+    "language": "Langue",
+    "cartItemCount": "{{count}} articles dans le panier"
+  },
+  "catalogue": {
+    "shopCollection": "Découvrir la collection",
+    "discoverSomething": "Découvrez de délicieuses choses",
+    "discountOff": "{{discount}} % de réduction",
+    "addToCart": "Ajouter au panier",
+    "noFavourites": "Aucun favori pour le moment",
+    "adjustFilters": "Modifiez vos filtres pour découvrir d'autres gourmandises."
+  },
+  "filter": {
+    "title": "Filtres",
+    "maximumPrice": "Prix maximum : ₹{{value}}",
+    "apply": "Appliquer les filtres"
+  },
+  "sort": {
+    "title": "Trier par",
+    "highToLow": "Prix décroissant",
+    "lowToHigh": "Prix croissant",
+    "discount": "Réduction"
+  },
+  "cart": {
+    "eyebrow": "VOS GOURMANDISES",
+    "title": "Votre panier",
+    "intro": "Plus qu'un instant : vos favoris vous attendent.",
+    "removeItem": "Supprimer l'article",
+    "priceDetails": "DÉTAILS DU PRIX",
+    "priceForItems": "Prix ({{count}} articles)",
+    "quantity": "Qté : {{count}}",
+    "increaseQuantity": "Augmenter la quantité",
+    "decreaseQuantity": "Diminuer la quantité",
+    "discount": "Réduction",
+    "totalPayable": "Total à payer",
+    "payNow": "Payer maintenant",
+    "emptyTitle": "Votre panier est vide !",
+    "emptyDescription": "Découvrez les snacks et produits du quotidien que vous aimez.",
+    "addItems": "Ajouter des articles"
+  },
+  "carousel": {
+    "ariaLabel": "Offres FreshKart",
+    "roleDescription": "carrousel",
+    "shopFavourites": "Voir les favoris",
+    "previousBanner": "Bannière précédente",
+    "nextBanner": "Bannière suivante",
+    "chooseBanner": "Choisir une bannière",
+    "showBanner": "Afficher la bannière {{number}}",
+    "slides": [
+      {
+        "eyebrow": "BON GOÛT, BONNE HUMEUR",
+        "title": "Un peu de joie",
+        "highlight": "à chaque bouchée.",
+        "description": "Rendez chaque moment plus doux avec une gourmandise à partager.",
+        "imageAlt": "Coffret cadeau de chocolats Cadbury Celebrations"
+      },
+      {
+        "eyebrow": "PLACE AU CROUSTILLANT",
+        "title": "Craquez avec plaisir.",
+        "highlight": "Un peu de piquant.",
+        "description": "Votre snack croustillant préféré est toujours une bonne idée.",
+        "imageAlt": "Sachet de snacks Kurkure Masala Munch"
+      },
+      {
+        "eyebrow": "RAPIDE, SAVOUREUX, FACILE",
+        "title": "Un grand réconfort,",
+        "highlight": "prêt en quelques minutes.",
+        "description": "Faites le plein de votre favori pour votre prochaine pause.",
+        "imageAlt": "Paquet de nouilles Maggi"
+      }
+    ]
+  },
+  "products": {
+    "kurkure": "Kurkure",
+    "kitkat": "Kitkat",
+    "celebrations": "Cadbury Celebrations",
+    "maggi": "Maggi",
+    "iphone": "iPhone 13 Pro Max 128 Go"
+  }
+}

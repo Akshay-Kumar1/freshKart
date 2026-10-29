@@ -1,0 +1,89 @@
+{
+  "app": {
+    "title": "FreshKart | Tus favoritos de cada día",
+    "description": "Descubre tus productos favoritos y deliciosos artículos esenciales en FreshKart."
+  },
+  "header": {
+    "homeLabel": "Inicio de FreshKart",
+    "brandFirst": "fresh",
+    "brandAccent": "Kart",
+    "cart": "Mi carrito",
+    "language": "Idioma",
+    "cartItemCount": "{{count}} artículos en el carrito"
+  },
+  "catalogue": {
+    "shopCollection": "Explora la colección",
+    "discoverSomething": "Descubre algo delicioso",
+    "discountOff": "{{discount}} % de descuento",
+    "addToCart": "Añadir al carrito",
+    "noFavourites": "Aún no encontramos tus favoritos",
+    "adjustFilters": "Prueba a cambiar los filtros para ver más opciones deliciosas."
+  },
+  "filter": {
+    "title": "Filtros",
+    "maximumPrice": "Precio máximo: ₹{{value}}",
+    "apply": "Aplicar filtros"
+  },
+  "sort": {
+    "title": "Ordenar por",
+    "highToLow": "Precio: de mayor a menor",
+    "lowToHigh": "Precio: de menor a mayor",
+    "discount": "Descuento"
+  },
+  "cart": {
+    "eyebrow": "TUS DELICIAS",
+    "title": "Tu carrito",
+    "intro": "Ya casi está: tus favoritos te están esperando.",
+    "removeItem": "Eliminar artículo",
+    "priceDetails": "DETALLES DEL PRECIO",
+    "priceForItems": "Precio ({{count}} artículos)",
+    "quantity": "Cant.: {{count}}",
+    "increaseQuantity": "Aumentar cantidad",
+    "decreaseQuantity": "Reducir cantidad",
+    "discount": "Descuento",
+    "totalPayable": "Total a pagar",
+    "payNow": "Pagar ahora",
+    "emptyTitle": "¡Tu carrito está vacío!",
+    "emptyDescription": "Descubre los snacks y productos esenciales que te encantan.",
+    "addItems": "Añadir artículos"
+  },
+  "carousel": {
+    "ariaLabel": "Ofertas de FreshKart",
+    "roleDescription": "carrusel",
+    "shopFavourites": "Ver favoritos",
+    "previousBanner": "Banner anterior",
+    "nextBanner": "Banner siguiente",
+    "chooseBanner": "Elige un banner",
+    "showBanner": "Mostrar banner {{number}}",
+    "slides": [
+      {
+        "eyebrow": "BUENA COMIDA, BUEN ÁNIMO",
+        "title": "Un poco de alegría",
+        "highlight": "en cada bocado.",
+        "description": "Endulza cada momento con un capricho para compartir.",
+        "imageAlt": "Caja de regalo de chocolates Cadbury Celebrations"
+      },
+      {
+        "eyebrow": "QUE EMPIECE LO CRUJIENTE",
+        "title": "Disfruta cada snack.",
+        "highlight": "Un toque picante.",
+        "description": "Tu snack crujiente favorito siempre es una buena idea.",
+        "imageAlt": "Bolsa de snacks Kurkure Masala Munch"
+      },
+      {
+        "eyebrow": "RÁPIDO, RICO Y FÁCIL",
+        "title": "Un gran antojo,",
+        "highlight": "listo en minutos.",
+        "description": "Ten a mano uno de tus favoritos para tu próxima pausa.",
+        "imageAlt": "Paquete de fideos Maggi"
+      }
+    ]
+  },
+  "products": {
+    "kurkure": "Kurkure",
+    "kitkat": "Kitkat",
+    "celebrations": "Cadbury Celebrations",
+    "maggi": "Maggi",
+    "iphone": "iPhone 13 Pro Max de 128 GB"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "app": {
+    "title": "FreshKart | 毎日のおすすめ",
+    "description": "FreshKartで毎日のおすすめ商品やおいしい食料品を見つけましょう。"
+  },
+  "header": {
+    "homeLabel": "FreshKart ホーム",
+    "brandFirst": "fresh",
+    "brandAccent": "Kart",
+    "cart": "カート",
+    "language": "言語",
+    "cartItemCount": "カート内の商品: {{count}}点"
+  },
+  "catalogue": {
+    "shopCollection": "商品を見てみる",
+    "discoverSomething": "おいしい商品を見つけよう",
+    "discountOff": "{{discount}}% 割引",
+    "addToCart": "カートに追加",
+    "noFavourites": "お気に入りが見つかりません",
+    "adjustFilters": "フィルターを調整して、ほかの商品を探してみてください。"
+  },
+  "filter": {
+    "title": "絞り込み",
+    "maximumPrice": "上限価格: ₹{{value}}",
+    "apply": "フィルターを適用"
+  },
+  "sort": {
+    "title": "並べ替え",
+    "highToLow": "価格の高い順",
+    "lowToHigh": "価格の安い順",
+    "discount": "割引率"
+  },
+  "cart": {
+    "eyebrow": "お気に入りの商品",
+    "title": "ショッピングカート",
+    "intro": "あと少しです。お気に入りの商品がお待ちしています。",
+    "removeItem": "商品を削除",
+    "priceDetails": "価格の詳細",
+    "priceForItems": "商品価格（{{count}}点）",
+    "quantity": "数量: {{count}}",
+    "increaseQuantity": "数量を増やす",
+    "decreaseQuantity": "数量を減らす",
+    "discount": "割引",
+    "totalPayable": "お支払い合計",
+    "payNow": "今すぐ支払う",
+    "emptyTitle": "カートは空です。",
+    "emptyDescription": "お気に入りのお菓子や日用品を見つけましょう。",
+    "addItems": "商品を追加"
+  },
+  "carousel": {
+    "ariaLabel": "FreshKart おすすめ商品",
+    "roleDescription": "カルーセル",
+    "shopFavourites": "おすすめ商品を見る",
+    "previousBanner": "前のバナー",
+    "nextBanner": "次のバナー",
+    "chooseBanner": "バナーを選択",
+    "showBanner": "バナー{{number}}を表示",
+    "slides": [
+      {
+        "eyebrow": "おいしい食べ物で、気分も晴れやかに",
+        "title": "ひとくちごとに",
+        "highlight": "小さな幸せ。",
+        "description": "大切な人と分け合うお菓子で、毎日に甘いひとときを。",
+        "imageAlt": "Cadbury Celebrations チョコレートギフトボックス"
+      },
+      {
+        "eyebrow": "カリッとした食感を楽しもう",
+        "title": "楽しくスナック。",
+        "highlight": "スパイシーな味わい。",
+        "description": "お気に入りのカリカリスナックは、いつでもぴったり。",
+        "imageAlt": "Kurkure Masala Munch スナックパック"
+      },
+      {
+        "eyebrow": "手早く、おいしく、簡単に",
+        "title": "ほっとする味を",
+        "highlight": "すぐに楽しもう。",
+        "description": "次の休憩にぴったりの手軽なお気に入りをどうぞ。",
+        "imageAlt": "Maggi インスタント麺のパッケージ"
+      }
+    ]
+  },
+  "products": {
+    "kurkure": "Kurkure",
+    "kitkat": "Kitkat",
+    "celebrations": "Cadbury Celebrations",
+    "maggi": "Maggi",
+    "iphone": "iPhone 13 Pro Max 128GB"
+  }
+}
