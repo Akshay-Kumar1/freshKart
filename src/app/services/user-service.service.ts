@@ -38,6 +38,6 @@ export class UserServiceService {
           "translationKey":"products.maggi"
         },
       ]
-    return products
+    return products;
   }
 }
