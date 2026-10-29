@@ -37,13 +37,6 @@ export class UserServiceService {
           "discount": 0,
           "translationKey":"products.maggi"
         },
-            {
-          "id": 5,
-          "img_url": './assets/iphone.jpg',
-          "price": 350,
-          "discount": 20,
-          "translationKey":"products.iphone"
-        },
       ]
     return products
   }
