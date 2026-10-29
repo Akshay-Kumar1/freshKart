@@ -354,6 +354,10 @@
     min-height: auto;
   }
 
+  .cart_price {
+    flex: 1;
+  }
+
   .img_size {
     height: 88px;
     width: 88px;
@@ -361,5 +365,28 @@
 
   .margin_left {
     margin-left: 5px;
+  }
+
+  .remove_button {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .cart-page {
+    padding: 24px 12px 45px;
+  }
+
+  .cart_items {
+    padding: 8px 12px;
+  }
+
+  .cart_blocks {
+    gap: 10px;
+  }
+
+  .img_size {
+    height: 72px;
+    width: 72px;
   }
 }

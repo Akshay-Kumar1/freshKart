@@ -43,7 +43,26 @@
   background: #ffe4d8;
 }
 
+@media (max-width: 820px) {
+  .padding_filter {
+    align-items: center;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: minmax(100px, .7fr) minmax(0, 2fr) minmax(110px, .8fr);
+  }
+
+  .bold,
+  .slidecontainer {
+    margin-bottom: 0;
+  }
+}
+
 @media (max-width: 680px) {
+  .padding_filter {
+    align-items: stretch;
+    display: block;
+  }
+
   .bold {
     margin-bottom: 12px;
   }

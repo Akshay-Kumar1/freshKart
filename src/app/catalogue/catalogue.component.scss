@@ -453,6 +453,10 @@
 }
 
 @media (max-width: 900px) {
+  .catalog-page {
+    padding: 0 24px 48px;
+  }
+
   .catalog-layout {
     gap: 20px;
     grid-template-columns: 190px minmax(0, 1fr);
@@ -460,6 +464,26 @@
 
   .product-grid {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .catalog-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .filter-panel,
+  .catalog-content {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .filter-panel {
+    padding: 18px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
   }
 }
 

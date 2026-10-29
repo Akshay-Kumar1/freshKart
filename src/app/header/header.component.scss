@@ -183,3 +183,44 @@
     display: none;
   }
 }
+
+@media (max-width: 380px) {
+  .header {
+    padding: 0 12px;
+  }
+
+  .brand {
+    font-size: 19px;
+    gap: 8px;
+  }
+
+  .brand_mark {
+    height: 34px;
+    width: 34px;
+  }
+
+  .header_actions {
+    gap: 6px;
+  }
+
+  .cart_link {
+    gap: 5px;
+    padding: 8px;
+  }
+
+  .cart_link > span:first-of-type {
+    display: none;
+  }
+
+  .language-picker select {
+    font-size: 11px;
+    min-height: 36px;
+    padding-left: 8px;
+    padding-right: 23px;
+  }
+
+  .language-picker:after {
+    right: 10px;
+    top: 13px;
+  }
+}
