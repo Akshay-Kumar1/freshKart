@@ -24,6 +24,10 @@
   margin: 0 0 8px;
 }
 
+:host-context(body.dark-theme) .cart-heading h1 {
+  color: #f3f4f6;
+}
+
 .cart-heading > p:last-child {
   color: #818b92;
   font-size: 14px;

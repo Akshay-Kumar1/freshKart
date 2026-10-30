@@ -9,6 +9,8 @@
     "brandAccent": "Kart",
     "cart": "Mon panier",
     "language": "Langue",
+    "switchToLightMode": "Passer en mode clair",
+    "switchToDarkMode": "Passer en mode sombre",
     "cartItemCount": "{{count}} articles dans le panier"
   },
   "catalogue": {
@@ -17,12 +19,23 @@
     "discountOff": "{{discount}} % de réduction",
     "addToCart": "Ajouter au panier",
     "noFavourites": "Aucun favori pour le moment",
-    "adjustFilters": "Modifiez vos filtres pour découvrir d'autres gourmandises."
+    "adjustFilters": "Modifiez vos filtres pour découvrir d'autres gourmandises.",
+    "searchPlaceholder": "Rechercher des snacks et du chocolat",
+    "noSearchResults": "Aucun produit correspondant trouvé",
+    "adjustSearch": "Essayez un autre produit ou une autre catégorie."
   },
   "filter": {
     "title": "Filtres",
     "maximumPrice": "Prix maximum : ₹{{value}}",
-    "apply": "Appliquer les filtres"
+    "categoriesTitle": "Catégories",
+    "categories": {
+      "chips": "Chips",
+      "chocolate": "Chocolat",
+      "biscuits": "Biscuits",
+      "noodles": "Nouilles instantanées"
+    },
+    "apply": "Appliquer les filtres",
+    "reset": "Réinitialiser les filtres"
   },
   "sort": {
     "title": "Trier par",
@@ -35,7 +48,7 @@
     "title": "Votre panier",
     "intro": "Plus qu'un instant : vos favoris vous attendent.",
     "removeItem": "Supprimer l'article",
-    "priceDetails": "DÉTAILS DU PRIX",
+    "priceDetails": "PAIEMENT",
     "priceForItems": "Prix ({{count}} articles)",
     "quantity": "Qté : {{count}}",
     "increaseQuantity": "Augmenter la quantité",
@@ -55,35 +68,52 @@
     "nextBanner": "Bannière suivante",
     "chooseBanner": "Choisir une bannière",
     "showBanner": "Afficher la bannière {{number}}",
-    "slides": [
-      {
+    "slides": {
+      "celebrations": {
         "eyebrow": "BON GOÛT, BONNE HUMEUR",
         "title": "Un peu de joie",
         "highlight": "à chaque bouchée.",
         "description": "Rendez chaque moment plus doux avec une gourmandise à partager.",
         "imageAlt": "Coffret cadeau de chocolats Cadbury Celebrations"
       },
-      {
+      "kurkure": {
         "eyebrow": "PLACE AU CROUSTILLANT",
         "title": "Craquez avec plaisir.",
         "highlight": "Un peu de piquant.",
         "description": "Votre snack croustillant préféré est toujours une bonne idée.",
         "imageAlt": "Sachet de snacks Kurkure Masala Munch"
       },
-      {
-        "eyebrow": "RAPIDE, SAVOUREUX, FACILE",
-        "title": "Un grand réconfort,",
-        "highlight": "prêt en quelques minutes.",
-        "description": "Faites le plein de votre favori pour votre prochaine pause.",
-        "imageAlt": "Paquet de nouilles Maggi"
+      "masalaChips": {
+        "eyebrow": "UN CROUSTILLANT AUDACIEUX",
+        "title": "Plus de saveur.",
+        "highlight": "Le masala qui réveille.",
+        "description": "Craquez pour votre snack épicé à petit prix.",
+        "imageAlt": "Sachet de chips de pommes de terre au masala"
+      },
+      "milkChocolate": {
+        "eyebrow": "UNE TOUCHE DE DOUCEUR",
+        "title": "Pause gourmande.",
+        "highlight": "Chocolat au lait.",
+        "description": "Savourez votre chocolat fondant préféré à prix doux.",
+        "imageAlt": "Tablette de chocolat au lait"
+      },
+      "chocolateWafer": {
+        "eyebrow": "UNE OFFRE CROQUANTE",
+        "title": "Des couches de plaisir.",
+        "highlight": "Gaufrette au chocolat.",
+        "description": "Une gourmandise croustillante et chocolatée à petit prix.",
+        "imageAlt": "Gaufrettes au chocolat"
       }
-    ]
+    }
   },
   "products": {
     "kurkure": "Kurkure",
     "kitkat": "Kitkat",
     "celebrations": "Cadbury Celebrations",
     "maggi": "Maggi",
-    "iphone": "iPhone 13 Pro Max 128 Go"
+    "masalaChips": "Chips de pommes de terre au masala",
+    "saltedChips": "Chips de pommes de terre salées",
+    "milkChocolate": "Tablette de chocolat au lait",
+    "chocolateWafer": "Gaufrettes au chocolat"
   }
 }

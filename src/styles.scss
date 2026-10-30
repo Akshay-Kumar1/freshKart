@@ -64,3 +64,197 @@ button {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+body.dark-theme {
+  background: #111827;
+  color: #e5e7eb;
+  color-scheme: dark;
+}
+
+body.light-theme {
+  background: #f7f8fa;
+  color: #17212b;
+  color-scheme: light;
+}
+
+body.dark-theme .header {
+  background: #151d2b;
+  border-bottom-color: #303b4b;
+}
+
+body.dark-theme .brand,
+body.dark-theme .product-name,
+body.dark-theme .product-price,
+body.dark-theme .quantity-value,
+body.dark-theme .product-title,
+body.dark-theme .font_weight,
+body.dark-theme .price_margin_payable,
+body.dark-theme .price_margin span,
+body.dark-theme .empty_cart_message h2,
+body.dark-theme .noFilter_text strong {
+  color: #f3f4f6;
+}
+
+body.dark-theme .catalog-carousel h1,
+body.dark-theme .catalog-toolbar h2,
+body.dark-theme .padding_filter .bold {
+  color: #ff9a76 !important;
+}
+
+body.dark-theme .language-picker select,
+body.dark-theme .theme-toggle {
+  background: #202b3b;
+  border-color: #3a4658;
+  color: #e5e7eb;
+}
+
+body.dark-theme .language-picker select option {
+  background: #202b3b;
+  color: #e5e7eb;
+}
+
+body.dark-theme .language-picker:after {
+  border-color: #c1c9d2;
+}
+
+body.dark-theme .theme-toggle:hover {
+  background: #303b4b;
+  border-color: #596679;
+  color: #ff9a76;
+}
+
+body.dark-theme .cart_link,
+body.dark-theme .brand_mark,
+body.dark-theme .filter_button,
+body.dark-theme .catalogue-quantity,
+body.dark-theme .remove_button,
+body.dark-theme .quantity-button {
+  background: #352b30;
+  border-color: #574047;
+  color: #ff9a76;
+}
+
+body.dark-theme .cart_link:hover,
+body.dark-theme .filter_button:hover,
+body.dark-theme .remove_button:hover {
+  background: #47343a;
+}
+
+body.dark-theme .filter-panel,
+body.dark-theme .product-card,
+body.dark-theme .noFilter_text,
+body.dark-theme .cart_items,
+body.dark-theme .price_details,
+body.dark-theme .empty_cart_message {
+  background: #1b2533;
+  border-color: #303b4b;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+}
+
+body.dark-theme .product-image-wrap {
+  background: #222e3d;
+}
+
+body.dark-theme .catalog-toolbar p,
+body.dark-theme .intro-copy,
+body.dark-theme .price-range-label,
+body.dark-theme .margin_gap,
+body.dark-theme .price_details_right,
+body.dark-theme .price_margin,
+body.dark-theme .cart-heading > p:last-child,
+body.dark-theme .margin_left,
+body.dark-theme .noFilter_text {
+  color: #a3adba;
+}
+
+body.dark-theme .cart-heading h1 {
+  color: #e5e7eb;
+}
+
+body.dark-theme .margin_gap_sort_by {
+  color: #d3dae2;
+}
+
+body.dark-theme .category-option {
+  color: #d3dae2;
+}
+
+body.dark-theme .search-bar {
+  background: #202b3b;
+  border-color: #3a4658;
+}
+
+body.dark-theme .search-bar:focus-within {
+  background: #202b3b;
+}
+
+body.dark-theme app-header .header_actions .search-bar input {
+  color: #e5e7eb;
+  -webkit-text-fill-color: #e5e7eb;
+  caret-color: #e5e7eb;
+}
+
+body.dark-theme app-header .header_actions .search-bar input::placeholder {
+  color: #a3adba;
+  -webkit-text-fill-color: #a3adba;
+}
+
+body.dark-theme .search-bar .svg_icon {
+  filter: invert(1);
+  opacity: .7;
+}
+
+body.dark-theme .category-filter legend {
+  color: #a3adba;
+}
+
+body.dark-theme .reset_filter_button {
+  border-color: #3a4658;
+  color: #d3dae2;
+}
+
+body.dark-theme .reset_filter_button:hover {
+  background: #202b3b;
+  border-color: #596679;
+}
+
+body.dark-theme .margin_gap:hover,
+body.dark-theme .isActive {
+  background: #352b30;
+  color: #ff9a76;
+}
+
+body.dark-theme .price_margin_payable {
+  border-top-color: #465161;
+}
+
+body.dark-theme .price_details_right,
+body.dark-theme .cart_blocks {
+  border-bottom-color: #303b4b;
+}
+
+body.dark-theme .catalog-carousel,
+body.dark-theme .carousel-snacks,
+body.dark-theme .carousel-comfort {
+  background: linear-gradient(115deg, #242b38 0%, #272d37 54%, #272d32 100%);
+}
+
+body.dark-theme .catalog-carousel:after {
+  background: radial-gradient(circle, rgba(240, 100, 55, .16) 0, rgba(240, 100, 55, 0) 68%);
+}
+
+body.dark-theme .carousel-arrow {
+  background: rgba(31, 41, 55, .9);
+  border-color: rgba(225, 231, 238, .12);
+  color: #e5e7eb;
+}
+
+body.dark-theme .carousel-arrow:hover {
+  background: #f06437;
+  color: #fff;
+}
+
+body.dark-theme .quantity-button:hover {
+  background: #f06437;
+  color: #fff;
+}

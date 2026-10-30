@@ -9,6 +9,8 @@
     "brandAccent": "Kart",
     "cart": "Mi carrito",
     "language": "Idioma",
+    "switchToLightMode": "Cambiar al modo claro",
+    "switchToDarkMode": "Cambiar al modo oscuro",
     "cartItemCount": "{{count}} artículos en el carrito"
   },
   "catalogue": {
@@ -17,12 +19,23 @@
     "discountOff": "{{discount}} % de descuento",
     "addToCart": "Añadir al carrito",
     "noFavourites": "Aún no encontramos tus favoritos",
-    "adjustFilters": "Prueba a cambiar los filtros para ver más opciones deliciosas."
+    "adjustFilters": "Prueba a cambiar los filtros para ver más opciones deliciosas.",
+    "searchPlaceholder": "Buscar aperitivos y chocolates",
+    "noSearchResults": "No se encontraron productos",
+    "adjustSearch": "Prueba con otro producto o categoría."
   },
   "filter": {
     "title": "Filtros",
     "maximumPrice": "Precio máximo: ₹{{value}}",
-    "apply": "Aplicar filtros"
+    "categoriesTitle": "Categorías",
+    "categories": {
+      "chips": "Patatas fritas",
+      "chocolate": "Chocolate",
+      "biscuits": "Galletas",
+      "noodles": "Fideos instantáneos"
+    },
+    "apply": "Aplicar filtros",
+    "reset": "Restablecer filtros"
   },
   "sort": {
     "title": "Ordenar por",
@@ -35,7 +48,7 @@
     "title": "Tu carrito",
     "intro": "Ya casi está: tus favoritos te están esperando.",
     "removeItem": "Eliminar artículo",
-    "priceDetails": "DETALLES DEL PRECIO",
+    "priceDetails": "FINALIZAR COMPRA",
     "priceForItems": "Precio ({{count}} artículos)",
     "quantity": "Cant.: {{count}}",
     "increaseQuantity": "Aumentar cantidad",
@@ -55,35 +68,52 @@
     "nextBanner": "Banner siguiente",
     "chooseBanner": "Elige un banner",
     "showBanner": "Mostrar banner {{number}}",
-    "slides": [
-      {
+    "slides": {
+      "celebrations": {
         "eyebrow": "BUENA COMIDA, BUEN ÁNIMO",
         "title": "Un poco de alegría",
         "highlight": "en cada bocado.",
         "description": "Endulza cada momento con un capricho para compartir.",
         "imageAlt": "Caja de regalo de chocolates Cadbury Celebrations"
       },
-      {
+      "kurkure": {
         "eyebrow": "QUE EMPIECE LO CRUJIENTE",
         "title": "Disfruta cada snack.",
         "highlight": "Un toque picante.",
         "description": "Tu snack crujiente favorito siempre es una buena idea.",
         "imageAlt": "Bolsa de snacks Kurkure Masala Munch"
       },
-      {
-        "eyebrow": "RÁPIDO, RICO Y FÁCIL",
-        "title": "Un gran antojo,",
-        "highlight": "listo en minutos.",
-        "description": "Ten a mano uno de tus favoritos para tu próxima pausa.",
-        "imageAlt": "Paquete de fideos Maggi"
+      "masalaChips": {
+        "eyebrow": "UN TOQUE CRUJIENTE",
+        "title": "Más sabor.",
+        "highlight": "Masala con chispa.",
+        "description": "Disfruta tu snack picante favorito por menos.",
+        "imageAlt": "Bolsa de patatas fritas con masala"
+      },
+      "milkChocolate": {
+        "eyebrow": "UN MOMENTO DULCE",
+        "title": "Date un capricho.",
+        "highlight": "Chocolate con leche.",
+        "description": "Disfruta de un cremoso chocolate a buen precio.",
+        "imageAlt": "Tableta de chocolate con leche"
+      },
+      "chocolateWafer": {
+        "eyebrow": "CRUJIENTE Y DELICIOSO",
+        "title": "Capas de sabor.",
+        "highlight": "Barquillo de chocolate.",
+        "description": "Un capricho crujiente y chocolatoso por menos.",
+        "imageAlt": "Barquillos de chocolate"
       }
-    ]
+    }
   },
   "products": {
     "kurkure": "Kurkure",
     "kitkat": "Kitkat",
     "celebrations": "Cadbury Celebrations",
     "maggi": "Maggi",
-    "iphone": "iPhone 13 Pro Max de 128 GB"
+    "masalaChips": "Patatas fritas con masala",
+    "saltedChips": "Patatas fritas saladas",
+    "milkChocolate": "Tableta de chocolate con leche",
+    "chocolateWafer": "Barquillos de chocolate"
   }
 }

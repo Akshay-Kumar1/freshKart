@@ -66,6 +66,19 @@
   z-index: 1;
 }
 
+.carousel-discount-badge {
+  background: #e8f6ed;
+  border-radius: 999px;
+  color: #267343;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 8px 12px;
+  position: absolute;
+  right: 12%;
+  top: 24px;
+  z-index: 2;
+}
+
 @keyframes carousel-copy-in-0 {
   0% { opacity: 0; filter: blur(6px); transform: translate3d(-52px, 12px, 0) scale(.96); }
   75% { opacity: 1; filter: blur(0); transform: translate3d(5px, 0, 0) scale(1.01); }

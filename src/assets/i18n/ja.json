@@ -9,6 +9,8 @@
     "brandAccent": "Kart",
     "cart": "カート",
     "language": "言語",
+    "switchToLightMode": "ライトモードに切り替え",
+    "switchToDarkMode": "ダークモードに切り替え",
     "cartItemCount": "カート内の商品: {{count}}点"
   },
   "catalogue": {
@@ -17,12 +19,23 @@
     "discountOff": "{{discount}}% 割引",
     "addToCart": "カートに追加",
     "noFavourites": "お気に入りが見つかりません",
-    "adjustFilters": "フィルターを調整して、ほかの商品を探してみてください。"
+    "adjustFilters": "フィルターを調整して、ほかの商品を探してみてください。",
+    "searchPlaceholder": "お菓子やチョコレートを検索",
+    "noSearchResults": "一致する商品が見つかりません",
+    "adjustSearch": "別の商品名やカテゴリー名をお試しください。"
   },
   "filter": {
     "title": "絞り込み",
     "maximumPrice": "上限価格: ₹{{value}}",
-    "apply": "フィルターを適用"
+    "categoriesTitle": "カテゴリー",
+    "categories": {
+      "chips": "ポテトチップス",
+      "chocolate": "チョコレート",
+      "biscuits": "ビスケット",
+      "noodles": "インスタント麺"
+    },
+    "apply": "フィルターを適用",
+    "reset": "フィルターをリセット"
   },
   "sort": {
     "title": "並べ替え",
@@ -35,7 +48,7 @@
     "title": "ショッピングカート",
     "intro": "あと少しです。お気に入りの商品がお待ちしています。",
     "removeItem": "商品を削除",
-    "priceDetails": "価格の詳細",
+    "priceDetails": "レジへ進む",
     "priceForItems": "商品価格（{{count}}点）",
     "quantity": "数量: {{count}}",
     "increaseQuantity": "数量を増やす",
@@ -55,35 +68,52 @@
     "nextBanner": "次のバナー",
     "chooseBanner": "バナーを選択",
     "showBanner": "バナー{{number}}を表示",
-    "slides": [
-      {
+    "slides": {
+      "celebrations": {
         "eyebrow": "おいしい食べ物で、気分も晴れやかに",
         "title": "ひとくちごとに",
         "highlight": "小さな幸せ。",
         "description": "大切な人と分け合うお菓子で、毎日に甘いひとときを。",
         "imageAlt": "Cadbury Celebrations チョコレートギフトボックス"
       },
-      {
+      "kurkure": {
         "eyebrow": "カリッとした食感を楽しもう",
         "title": "楽しくスナック。",
         "highlight": "スパイシーな味わい。",
         "description": "お気に入りのカリカリスナックは、いつでもぴったり。",
         "imageAlt": "Kurkure Masala Munch スナックパック"
       },
-      {
-        "eyebrow": "手早く、おいしく、簡単に",
-        "title": "ほっとする味を",
-        "highlight": "すぐに楽しもう。",
-        "description": "次の休憩にぴったりの手軽なお気に入りをどうぞ。",
-        "imageAlt": "Maggi インスタント麺のパッケージ"
+      "masalaChips": {
+        "eyebrow": "スパイス香るカリッと食感",
+        "title": "もっとおいしく。",
+        "highlight": "ピリ辛マサラ味。",
+        "description": "お気に入りのスパイシースナックをお得に。",
+        "imageAlt": "マサラ味のポテトチップス"
+      },
+      "milkChocolate": {
+        "eyebrow": "甘いひとときを",
+        "title": "ちょっとひと休み。",
+        "highlight": "ミルクチョコレート。",
+        "description": "なめらかなチョコレートをお楽しみください。",
+        "imageAlt": "ミルクチョコレートバー"
+      },
+      "chocolateWafer": {
+        "eyebrow": "カリッとお得に",
+        "title": "重なるおいしさ。",
+        "highlight": "チョコウエハース。",
+        "description": "サクサクのチョコレート菓子をお得に。",
+        "imageAlt": "チョコレートウエハース"
       }
-    ]
+    }
   },
   "products": {
     "kurkure": "Kurkure",
     "kitkat": "Kitkat",
     "celebrations": "Cadbury Celebrations",
     "maggi": "Maggi",
-    "iphone": "iPhone 13 Pro Max 128GB"
+    "masalaChips": "マサラ味のポテトチップス",
+    "saltedChips": "塩味のポテトチップス",
+    "milkChocolate": "ミルクチョコレートバー",
+    "chocolateWafer": "チョコレートウエハース"
   }
 }

@@ -1,6 +1,14 @@
 import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
+import { UserServiceService } from '../services/user-service.service';
+
+interface CarouselSlide {
+  image: string;
+  theme: string;
+  discount: number;
+  copyKey: string;
+}
 
 @Component({
   standalone: true,
@@ -10,11 +18,7 @@ import { TranslatePipe } from '@ngx-translate/core';
   imports: [CommonModule, TranslatePipe]
 })
 export class CarouselComponent implements OnInit, OnDestroy {
-  readonly carouselSlides = [
-    { image: './assets/celebrations.jpg', theme: 'carousel-celebrations' },
-    { image: './assets/kurkure.jpg', theme: 'carousel-snacks' },
-    { image: './assets/maggi.jpg', theme: 'carousel-comfort' }
-  ];
+  readonly carouselSlides: CarouselSlide[];
   currentCarouselIndex = 0;
   private carouselTimer: ReturnType<typeof setInterval>;
 
@@ -22,7 +26,19 @@ export class CarouselComponent implements OnInit, OnDestroy {
     return this.carouselSlides[this.currentCarouselIndex];
   }
 
-  constructor(private changeDetector: ChangeDetectorRef) { }
+  constructor(
+    private changeDetector: ChangeDetectorRef,
+    userService: UserServiceService
+  ) {
+    this.carouselSlides = userService.getItems()
+      .filter(item => item.discount > 0)
+      .map(item => ({
+        image: item.img_url,
+        theme: item.category === 'chips' ? 'carousel-snacks' : 'carousel-' + item.category,
+        discount: item.discount,
+        copyKey: item.translationKey.replace('products.', '')
+      }));
+  }
 
   ngOnInit() {
     this.carouselTimer = setInterval(() => this.showNextSlide(), 5000);

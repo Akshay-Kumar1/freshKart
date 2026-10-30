@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bag" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#ffb629"/>
+      <stop offset="1" stop-color="#ed5b20"/>
+    </linearGradient>
+  </defs>
+  <path d="m105 54 190 0 22 36-14 228-25 24H122l-25-24L83 90z" fill="#d84c19" opacity=".16"/>
+  <path d="m101 45 198 0 18 42-15 232-24 22H122l-24-22L83 87z" fill="url(#bag)" stroke="#d94b19" stroke-width="5"/>
+  <path d="m101 45 198 0 8 20H94zM98 299l24 22h156l24-22-2 20-22 20H122l-22-20z" fill="#ffd46a"/>
+  <path d="M111 104h178v131H111z" fill="#fff3cd" rx="14"/>
+  <text x="200" y="137" fill="#a83c1c" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle">CRUNCHY SNACK</text>
+  <text x="200" y="177" fill="#d64b20" font-family="Arial,sans-serif" font-size="31" font-weight="900" text-anchor="middle">MASALA</text>
+  <text x="200" y="207" fill="#763218" font-family="Arial,sans-serif" font-size="21" font-weight="800" text-anchor="middle">POTATO CHIPS</text>
+  <circle cx="200" cy="266" r="36" fill="#ffdb75" stroke="#f6ad36" stroke-width="5"/>
+  <path d="M184 251q16-10 29 3t-2 22q-18 12-29-2t2-23Zm2 0 24 24m-26-8 22-12" fill="none" stroke="#d88a25" stroke-linecap="round" stroke-width="5"/>
+</svg>

@@ -7,9 +7,13 @@
       <span>{{ 'header.brandFirst' | translate }}<span class="brand_accent">{{ 'header.brandAccent' | translate }}</span></span>
     </a>
     <div class="header_actions">
-      <span class="search_icon" aria-hidden="true">
+      <label class="search-bar">
+        <span class="visually-hidden">{{ 'catalogue.searchPlaceholder' | translate }}</span>
         <img class="svg_icon" src="../../assets/_ionicons_svg_md-search.svg" alt="">
-      </span>
+        <input type="search" [value]="searchQuery" (input)="searchProducts($event)"
+          [placeholder]="'catalogue.searchPlaceholder' | translate"
+          [attr.aria-label]="'catalogue.searchPlaceholder' | translate">
+      </label>
       <a class="cart_link" routerLink="/cart">
         <img class="svg_icon" src="../../assets/_ionicons_svg_md-cart.svg" alt="">
         <span>{{ 'header.cart' | translate }}</span>
@@ -24,6 +28,19 @@
           <option *ngFor="let language of languages" [value]="language.code">{{ language.name }}</option>
         </select>
       </label>
+      <button class="theme-toggle" type="button" (click)="toggleTheme()"
+        [attr.aria-label]="(isDarkMode ? 'header.switchToLightMode' : 'header.switchToDarkMode') | translate"
+        [attr.aria-pressed]="isDarkMode">
+        <svg *ngIf="isDarkMode; else moonIcon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path>
+        </svg>
+        <ng-template #moonIcon>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.2 15.1A8.4 8.4 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15.1Z"></path>
+          </svg>
+        </ng-template>
+      </button>
     </div>
   </div>
 </header>

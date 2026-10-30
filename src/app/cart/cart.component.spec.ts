@@ -77,4 +77,14 @@ describe('CartComponent', () => {
 
     expect(fixture.nativeElement.textContent).toContain('Your cart seems empty');
   });
+
+  it('should keep the cart heading visible in dark mode', () => {
+    document.body.classList.add('dark-theme');
+    fixture.detectChanges();
+
+    const heading = fixture.nativeElement.querySelector('.cart-heading h1');
+    expect(getComputedStyle(heading).color).toBe('rgb(243, 244, 246)');
+
+    document.body.classList.remove('dark-theme');
+  });
 });

@@ -2,18 +2,21 @@
   [attr.aria-roledescription]="'carousel.roleDescription' | translate"
   [attr.aria-label]="'carousel.ariaLabel' | translate">
   <div class="carousel-copy" [style.animation-name]="'carousel-copy-in-' + currentCarouselIndex" aria-live="polite">
-    <p class="eyebrow">{{ ('carousel.slides.' + currentCarouselIndex + '.eyebrow') | translate }}</p>
-    <h1>{{ ('carousel.slides.' + currentCarouselIndex + '.title') | translate }}<br>
-      <span>{{ ('carousel.slides.' + currentCarouselIndex + '.highlight') | translate }}</span>
+    <p class="eyebrow">{{ ('carousel.slides.' + currentCarouselSlide.copyKey + '.eyebrow') | translate }}</p>
+    <h1>{{ ('carousel.slides.' + currentCarouselSlide.copyKey + '.title') | translate }}<br>
+      <span>{{ ('carousel.slides.' + currentCarouselSlide.copyKey + '.highlight') | translate }}</span>
     </h1>
-    <p class="intro-copy">{{ ('carousel.slides.' + currentCarouselIndex + '.description') | translate }}</p>
+    <p class="intro-copy">{{ ('carousel.slides.' + currentCarouselSlide.copyKey + '.description') | translate }}</p>
     <a class="carousel-cta" href="#products">
       {{ 'carousel.shopFavourites' | translate }} <span aria-hidden="true">→</span>
     </a>
   </div>
   <img class="carousel-image" [style.animation-name]="'carousel-image-in-' + currentCarouselIndex"
     [src]="currentCarouselSlide.image"
-    [alt]="('carousel.slides.' + currentCarouselIndex + '.imageAlt') | translate">
+    [alt]="('carousel.slides.' + currentCarouselSlide.copyKey + '.imageAlt') | translate">
+  <span class="carousel-discount-badge">
+    {{ 'catalogue.discountOff' | translate:{discount: currentCarouselSlide.discount} }}
+  </span>
   <button class="carousel-arrow carousel-arrow-left" type="button"
     [attr.aria-label]="'carousel.previousBanner' | translate"
     (click)="showPreviousSlide()">&#8249;</button>

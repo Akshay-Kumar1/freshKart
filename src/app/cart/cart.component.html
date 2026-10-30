@@ -44,7 +44,7 @@
           {{ 'cart.priceForItems' | translate:{count: cartItemCount} }}
           <span><em class="fa items_details">&#xf156;</em>{{totalPrice}}</span>
         </div>
-        <div class="price_margin">
+        <div class="price_margin" *ngIf="totalDiscount > 0">
           {{ 'cart.discount' | translate }}
           <span><em class="fa items_details">&#xf156;</em>{{totalDiscount}}</span>
         </div>

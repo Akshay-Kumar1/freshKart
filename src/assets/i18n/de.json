@@ -9,6 +9,8 @@
     "brandAccent": "Kart",
     "cart": "Mein Warenkorb",
     "language": "Sprache",
+    "switchToLightMode": "Zum hellen Modus wechseln",
+    "switchToDarkMode": "Zum dunklen Modus wechseln",
     "cartItemCount": "{{count}} Artikel im Warenkorb"
   },
   "catalogue": {
@@ -17,12 +19,23 @@
     "discountOff": "{{discount}} % Rabatt",
     "addToCart": "In den Warenkorb",
     "noFavourites": "Noch keine Favoriten gefunden",
-    "adjustFilters": "Passe deine Filter an, um weitere Leckereien zu entdecken."
+    "adjustFilters": "Passe deine Filter an, um weitere Leckereien zu entdecken.",
+    "searchPlaceholder": "Snacks und Schokolade suchen",
+    "noSearchResults": "Keine passenden Produkte gefunden",
+    "adjustSearch": "Versuche einen anderen Produkt- oder Kategorienamen."
   },
   "filter": {
     "title": "Filter",
     "maximumPrice": "Höchstpreis: ₹{{value}}",
-    "apply": "Filter anwenden"
+    "categoriesTitle": "Kategorien",
+    "categories": {
+      "chips": "Chips",
+      "chocolate": "Schokolade",
+      "biscuits": "Kekse",
+      "noodles": "Instantnudeln"
+    },
+    "apply": "Filter anwenden",
+    "reset": "Filter zurücksetzen"
   },
   "sort": {
     "title": "Sortieren nach",
@@ -35,7 +48,7 @@
     "title": "Dein Warenkorb",
     "intro": "Fast geschafft – deine Favoriten warten schon.",
     "removeItem": "Artikel entfernen",
-    "priceDetails": "PREISDETAILS",
+    "priceDetails": "ZUR KASSE",
     "priceForItems": "Preis ({{count}} Artikel)",
     "quantity": "Menge: {{count}}",
     "increaseQuantity": "Menge erhöhen",
@@ -55,35 +68,52 @@
     "nextBanner": "Nächstes Banner",
     "chooseBanner": "Banner auswählen",
     "showBanner": "Banner {{number}} anzeigen",
-    "slides": [
-      {
+    "slides": {
+      "celebrations": {
         "eyebrow": "GUTES ESSEN, GUTE LAUNE",
         "title": "Ein bisschen Freude",
         "highlight": "in jedem Bissen.",
         "description": "Mach jeden Moment süßer mit einer Leckerei zum Teilen.",
         "imageAlt": "Cadbury Celebrations Schokoladengeschenkbox"
       },
-      {
+      "kurkure": {
         "eyebrow": "JETZT WIRD'S KNUSPRIG",
         "title": "Knabbere mit Freude.",
         "highlight": "Eine Prise Schärfe.",
         "description": "Dein knuspriger Lieblingssnack ist immer eine gute Idee.",
         "imageAlt": "Kurkure Masala Munch Snackpackung"
       },
-      {
-        "eyebrow": "SCHNELL, LECKER, EINFACH",
-        "title": "Wohltuend und",
-        "highlight": "in Minuten fertig.",
-        "description": "Hol dir einen schnellen Favoriten für deine nächste Pause.",
-        "imageAlt": "Maggi-Nudelpackung"
+      "masalaChips": {
+        "eyebrow": "KNUSPRIG UND WÜRZIG",
+        "title": "Mehr Geschmack.",
+        "highlight": "Masala mit Pfiff.",
+        "description": "Hol dir deinen würzigen Snack jetzt günstiger.",
+        "imageAlt": "Tüte mit Masala-Kartoffelchips"
+      },
+      "milkChocolate": {
+        "eyebrow": "EIN BISSCHEN SÜSSES",
+        "title": "Gönn dir eine Pause.",
+        "highlight": "Momente mit Milchschokolade.",
+        "description": "Genieße deinen cremigen Schokoladenfavoriten.",
+        "imageAlt": "Vollmilchschokoladentafel"
+      },
+      "chocolateWafer": {
+        "eyebrow": "KNUSPRIGES ANGEBOT",
+        "title": "Schicht für Schicht.",
+        "highlight": "Knuspriger Schokogenuss.",
+        "description": "Knusprige Schokolade zum günstigeren Preis.",
+        "imageAlt": "Schokoladenwaffeln"
       }
-    ]
+    }
   },
   "products": {
     "kurkure": "Kurkure",
     "kitkat": "Kitkat",
     "celebrations": "Cadbury Celebrations",
     "maggi": "Maggi",
-    "iphone": "iPhone 13 Pro Max 128 GB"
+    "masalaChips": "Kartoffelchips mit Masala",
+    "saltedChips": "Gesalzene Kartoffelchips",
+    "milkChocolate": "Vollmilchschokoladentafel",
+    "chocolateWafer": "Schokoladenwaffeln"
   }
 }

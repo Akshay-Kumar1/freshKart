@@ -1,11 +1,18 @@
 <section class="padding_filter">
-  <p class="bold">{{ 'filter.title' | translate }}</p>
-  <div class="slidecontainer">
-    <label class="price-range-label" for="maximum-price">
-      {{ 'filter.maximumPrice' | translate:{value: value} }}
+  <fieldset class="category-filter" *ngIf="categories.length">
+    <legend>{{ 'filter.categoriesTitle' | translate }}</legend>
+    <label class="category-option" *ngFor="let category of categories">
+      <input type="checkbox" [checked]="selectedCategories.includes(category)"
+        (change)="toggleCategory(category, $event)">
+      <span>{{ ('filter.categories.' + category) | translate }}</span>
     </label>
-    <input id="maximum-price" class="price-range" type="range" min="0" max="600" step="10"
-      [(ngModel)]="value" (ngModelChange)="sliderEvent($event)">
+  </fieldset>
+  <div class="filter-actions">
+    <button class="filter_button" type="button" (click)="filterItems()">
+      {{ 'filter.apply' | translate }}
+    </button>
+    <button class="reset_filter_button" type="button" (click)="resetFilters()">
+      {{ 'filter.reset' | translate }}
+    </button>
   </div>
-  <button class="filter_button" (click)="filterItems()">{{ 'filter.apply' | translate }}</button>
 </section>

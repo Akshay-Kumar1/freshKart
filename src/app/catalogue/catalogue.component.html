@@ -44,8 +44,8 @@
       </div>
       <div class="noFilter_text" *ngIf="noFilteredItems === true && catalogueLoading === false">
         <span class="empty-icon">⌕</span>
-        <strong>{{ 'catalogue.noFavourites' | translate }}</strong>
-        <span>{{ 'catalogue.adjustFilters' | translate }}</span>
+        <strong>{{ (searchQuery ? 'catalogue.noSearchResults' : 'catalogue.noFavourites') | translate }}</strong>
+        <span>{{ (searchQuery ? 'catalogue.adjustSearch' : 'catalogue.adjustFilters') | translate }}</span>
       </div>
       <div *ngIf="catalogueLoading === true" class="loader loader_alignment"></div>
     </section>

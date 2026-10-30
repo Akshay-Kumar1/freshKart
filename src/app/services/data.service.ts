@@ -10,6 +10,9 @@ export class DataService {
   private messageSource = new BehaviorSubject([]);
   currentMessage = this.messageSource.asObservable();
 
+  private productSearchSource = new BehaviorSubject('');
+  productSearch$ = this.productSearchSource.asObservable();
+
   private cartInfo = new BehaviorSubject<CartModel[]>([]);
   cartItems$ = this.cartInfo.asObservable();
 
@@ -17,6 +20,15 @@ export class DataService {
   changeMessage(data: any) {
     this.messageSource.next(data);
   }
+
+  setProductSearch(query: string) {
+    this.productSearchSource.next(query);
+  }
+
+  getProductSearch() {
+    return this.productSearchSource.getValue();
+  }
+
   addToCart(item: CartModel) {
     const currentItems = this.cartInfo.getValue();
     const existingItem = currentItems.find(cartItem => cartItem.id === item.id);

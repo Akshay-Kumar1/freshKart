@@ -9,6 +9,8 @@
     "brandAccent": "Kart",
     "cart": "My cart",
     "language": "Language",
+    "switchToLightMode": "Switch to light mode",
+    "switchToDarkMode": "Switch to dark mode",
     "cartItemCount": "{{count}} items in cart"
   },
   "catalogue": {
@@ -17,12 +19,23 @@
     "discountOff": "{{discount}}% off",
     "addToCart": "Add to Cart",
     "noFavourites": "No favourites found just yet",
-    "adjustFilters": "Try adjusting your filters to see more tasty options."
+    "adjustFilters": "Try adjusting your filters to see more tasty options.",
+    "searchPlaceholder": "Search snacks and chocolates",
+    "noSearchResults": "No matching products found",
+    "adjustSearch": "Try another product or category name."
   },
   "filter": {
     "title": "Filters",
     "maximumPrice": "Maximum price: ₹{{value}}",
-    "apply": "Apply filters"
+    "categoriesTitle": "Categories",
+    "categories": {
+      "chips": "Chips",
+      "chocolate": "Chocolate",
+      "biscuits": "Biscuits",
+      "noodles": "Instant noodles"
+    },
+    "apply": "Apply filters",
+    "reset": "Reset filters"
   },
   "sort": {
     "title": "Sort By",
@@ -35,7 +48,7 @@
     "title": "Your shopping cart",
     "intro": "Almost there — your favourites are waiting.",
     "removeItem": "Remove item",
-    "priceDetails": "PRICE DETAILS",
+    "priceDetails": "CHECKOUT",
     "priceForItems": "Price ({{count}} items)",
     "quantity": "Qty: {{count}}",
     "increaseQuantity": "Increase quantity",
@@ -55,35 +68,52 @@
     "nextBanner": "Next banner",
     "chooseBanner": "Choose a banner",
     "showBanner": "Show banner {{number}}",
-    "slides": [
-      {
+    "slides": {
+      "celebrations": {
         "eyebrow": "GOOD FOOD, GOOD MOOD",
         "title": "A little joy",
         "highlight": "in every bite.",
         "description": "Make everyday moments sweeter with a treat worth sharing.",
         "imageAlt": "Cadbury Celebrations chocolate gift box"
       },
-      {
+      "kurkure": {
         "eyebrow": "BRING ON THE CRUNCH",
         "title": "Snack happy.",
         "highlight": "Live a little spicy.",
         "description": "Your favourite crunchy snack is always a good idea.",
         "imageAlt": "Kurkure Masala Munch snack pack"
       },
-      {
-        "eyebrow": "QUICK, TASTY, EASY",
-        "title": "Big comfort,",
-        "highlight": "ready in minutes.",
-        "description": "Stock up on a quick favourite for your next cosy break.",
-        "imageAlt": "Maggi noodles packet"
+      "masalaChips": {
+        "eyebrow": "A BOLD LITTLE CRUNCH",
+        "title": "Turn up the flavour.",
+        "highlight": "Masala with a kick.",
+        "description": "Get your spicy snack fix for less.",
+        "imageAlt": "Masala potato chips snack bag"
+      },
+      "milkChocolate": {
+        "eyebrow": "A LITTLE SWEETNESS",
+        "title": "Take a sweet break.",
+        "highlight": "Milk chocolate moments.",
+        "description": "Treat yourself to a smooth chocolate favourite.",
+        "imageAlt": "Milk chocolate bar"
+      },
+      "chocolateWafer": {
+        "eyebrow": "CRUNCH INTO A DEAL",
+        "title": "Layers of delight.",
+        "highlight": "Chocolate wafer bliss.",
+        "description": "Enjoy a crisp, chocolatey treat for less.",
+        "imageAlt": "Chocolate wafer biscuits"
       }
-    ]
+    }
   },
   "products": {
     "kurkure": "Kurkure",
     "kitkat": "Kitkat",
     "celebrations": "Cadbury Celebrations",
     "maggi": "Maggi",
-    "iphone": "iPhone 13 Pro Max 128GB"
+    "masalaChips": "Masala Potato Chips",
+    "saltedChips": "Salted Potato Chips",
+    "milkChocolate": "Milk Chocolate Bar",
+    "chocolateWafer": "Chocolate Wafer Biscuits"
   }
 }

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="wrap" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#8f4b9e"/>
+      <stop offset="1" stop-color="#54235f"/>
+    </linearGradient>
+  </defs>
+  <rect x="89" y="77" width="222" height="250" rx="20" fill="#321b39" opacity=".18"/>
+  <rect x="81" y="66" width="222" height="250" rx="20" fill="url(#wrap)" stroke="#492052" stroke-width="5"/>
+  <path d="M101 86h182v210H101z" fill="none" stroke="#c18bc7" stroke-width="2"/>
+  <text x="192" y="120" fill="#f3d9a1" font-family="Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle">CREAMY &amp; SMOOTH</text>
+  <text x="192" y="161" fill="#fff4d8" font-family="Arial,sans-serif" font-size="28" font-weight="900" text-anchor="middle">MILK</text>
+  <text x="192" y="193" fill="#fff4d8" font-family="Arial,sans-serif" font-size="24" font-weight="900" text-anchor="middle">CHOCOLATE</text>
+  <path d="M134 222h116v54H134z" fill="#f1d8a4" stroke="#d5b875" stroke-width="3"/>
+  <path d="M192 222v54m-58-27h116" stroke="#bc9860" stroke-width="3"/>
+  <path d="M143 233h39v14h-39zm58 0h39v14h-39zm-58 20h39v14h-39zm58 0h39v14h-39z" fill="#70452b"/>
+  <circle cx="271" cy="95" r="12" fill="#f3d9a1"/>
+</svg>

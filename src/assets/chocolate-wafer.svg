@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="wrap" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#ef6c59"/>
+      <stop offset="1" stop-color="#b92e48"/>
+    </linearGradient>
+  </defs>
+  <path d="m91 105 205-18 18 204-205 18z" fill="#572637" opacity=".17"/>
+  <path d="m79 94 205-18 18 204-205 18z" fill="url(#wrap)" stroke="#a92c46" stroke-width="5"/>
+  <path d="m93 108 177-15 14 158-177 15z" fill="#fff0d6"/>
+  <text x="185" y="132" fill="#8e2942" font-family="Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle">CRISP &amp; DELICIOUS</text>
+  <text x="185" y="169" fill="#b8324b" font-family="Arial,sans-serif" font-size="25" font-weight="900" text-anchor="middle">CHOCOLATE</text>
+  <text x="185" y="198" fill="#653343" font-family="Arial,sans-serif" font-size="22" font-weight="900" text-anchor="middle">WAFER BITES</text>
+  <g transform="rotate(-8 185 239)">
+    <rect x="130" y="216" width="110" height="48" rx="5" fill="#7b422b"/>
+    <path d="M130 228h110m-110 12h110m-80-24v48m40-48v48" stroke="#e5b47b" stroke-width="4"/>
+    <path d="M143 220h26v8h-26zm40 0h26v8h-26zm-40 24h26v8h-26zm40 0h26v8h-26z" fill="#f2d3a0"/>
+  </g>
+  <path d="m79 94-12-9 5-13 12 4m205 0 14-10 12 10-13 10m-202 201-12 12 10 13 13-10m193-17 13 9 10-12-12-11" fill="#ffd280"/>
+</svg>

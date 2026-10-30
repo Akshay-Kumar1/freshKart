@@ -9,6 +9,8 @@
     "brandAccent": "Kart",
     "cart": "Il mio carrello",
     "language": "Lingua",
+    "switchToLightMode": "Passa alla modalità chiara",
+    "switchToDarkMode": "Passa alla modalità scura",
     "cartItemCount": "{{count}} articoli nel carrello"
   },
   "catalogue": {
@@ -17,12 +19,23 @@
     "discountOff": "{{discount}}% di sconto",
     "addToCart": "Aggiungi al carrello",
     "noFavourites": "Non hai ancora trovato i tuoi preferiti",
-    "adjustFilters": "Modifica i filtri per scoprire altre deliziose opzioni."
+    "adjustFilters": "Modifica i filtri per scoprire altre deliziose opzioni.",
+    "searchPlaceholder": "Cerca snack e cioccolato",
+    "noSearchResults": "Nessun prodotto corrispondente trovato",
+    "adjustSearch": "Prova un altro prodotto o una categoria diversa."
   },
   "filter": {
     "title": "Filtri",
     "maximumPrice": "Prezzo massimo: ₹{{value}}",
-    "apply": "Applica filtri"
+    "categoriesTitle": "Categorie",
+    "categories": {
+      "chips": "Patatine",
+      "chocolate": "Cioccolato",
+      "biscuits": "Biscotti",
+      "noodles": "Noodles istantanei"
+    },
+    "apply": "Applica filtri",
+    "reset": "Reimposta filtri"
   },
   "sort": {
     "title": "Ordina per",
@@ -35,7 +48,7 @@
     "title": "Il tuo carrello",
     "intro": "Ci sei quasi: i tuoi preferiti ti aspettano.",
     "removeItem": "Rimuovi articolo",
-    "priceDetails": "DETTAGLI DEL PREZZO",
+    "priceDetails": "VAI ALLA CASSA",
     "priceForItems": "Prezzo ({{count}} articoli)",
     "quantity": "Qtà: {{count}}",
     "increaseQuantity": "Aumenta la quantità",
@@ -55,35 +68,52 @@
     "nextBanner": "Banner successivo",
     "chooseBanner": "Scegli un banner",
     "showBanner": "Mostra banner {{number}}",
-    "slides": [
-      {
+    "slides": {
+      "celebrations": {
         "eyebrow": "BUON CIBO, BUON UMORE",
         "title": "Un pizzico di gioia",
         "highlight": "in ogni morso.",
         "description": "Rendi più dolci i tuoi momenti con una delizia da condividere.",
         "imageAlt": "Confezione regalo di cioccolatini Cadbury Celebrations"
       },
-      {
+      "kurkure": {
         "eyebrow": "VIA ALLA CROCCANTEZZA",
         "title": "Sgranocchia felice.",
         "highlight": "Un tocco piccante.",
         "description": "Il tuo snack croccante preferito è sempre una buona idea.",
         "imageAlt": "Confezione di snack Kurkure Masala Munch"
       },
-      {
-        "eyebrow": "VELOCE, GUSTOSO, FACILE",
-        "title": "Tutto il comfort",
-        "highlight": "pronto in pochi minuti.",
-        "description": "Fai scorta di un prodotto preferito per la tua prossima pausa.",
-        "imageAlt": "Confezione di noodles Maggi"
+      "masalaChips": {
+        "eyebrow": "UNA CROCCANTE SORPRESA",
+        "title": "Più gusto.",
+        "highlight": "Masala dal gusto deciso.",
+        "description": "Il tuo snack speziato preferito, a un prezzo speciale.",
+        "imageAlt": "Confezione di patatine al masala"
+      },
+      "milkChocolate": {
+        "eyebrow": "UN TOCCO DI DOLCEZZA",
+        "title": "Concediti una pausa.",
+        "highlight": "Cioccolato al latte.",
+        "description": "Goditi il tuo cioccolato cremoso preferito.",
+        "imageAlt": "Tavoletta di cioccolato al latte"
+      },
+      "chocolateWafer": {
+        "eyebrow": "UN'OFFERTA CROCCANTE",
+        "title": "Strati di bontà.",
+        "highlight": "Wafer al cioccolato.",
+        "description": "Una delizia croccante al cioccolato, a meno.",
+        "imageAlt": "Wafer al cioccolato"
       }
-    ]
+    }
   },
   "products": {
     "kurkure": "Kurkure",
     "kitkat": "Kitkat",
     "celebrations": "Cadbury Celebrations",
     "maggi": "Maggi",
-    "iphone": "iPhone 13 Pro Max 128 GB"
+    "masalaChips": "Patatine al masala",
+    "saltedChips": "Patatine salate",
+    "milkChocolate": "Tavoletta di cioccolato al latte",
+    "chocolateWafer": "Wafer al cioccolato"
   }
 }
