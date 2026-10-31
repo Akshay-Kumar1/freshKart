@@ -1,16 +1,30 @@
 {
   "name": "freshkart",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fresh Kart",
+  "homepage": "https://github.com/Akshay-Kumar1/cart-App#readme",
+  "bugs": {
+    "url": "https://github.com/Akshay-Kumar1/cart-App/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akshay-Kumar1/cart-App.git"
+  },
+  "license": "ISC",
+  "author": "Akshay47",
+  "type": "commonjs",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:backend": "node server.js",
     "build": "ng build",
     "test": "ng test freshKart",
     "github-build": "ng build --configuration production --base-href 'https://Akshay-Kumar1.github.io/freshKart/'"
-  },
-  "private": true,
-  "engines": {
-    "node": "^22.22.3 || ^24.15.0 || >=26.0.0"
   },
   "dependencies": {
     "@angular/common": "^22.2.3",
@@ -21,6 +35,8 @@
     "@angular/router": "^22.2.3",
     "@ngx-translate/core": "^18.1.0",
     "@ngx-translate/http-loader": "^18.1.0",
+    "express": "^5.3.0",
+    "mongoose": "^9.11.4",
     "rxjs": "^7.8.2",
     "tslib": "^2.8.1"
   },
@@ -31,5 +47,8 @@
     "jsdom": "^27.0.0",
     "typescript": "~6.0.3",
     "vitest": "^4.0.0"
+  },
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26.0.0"
   }
 }

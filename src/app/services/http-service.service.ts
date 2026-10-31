@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
+import { Product } from '../models/product';
 
 @Injectable({
   providedIn: 'root'
@@ -8,13 +10,9 @@ import { environment } from '../../environments/environment';
 export class HttpServiceService {
 
   constructor(private http: HttpClient) { }
-  jsonGet(url) {
-    url = environment.mainUrl;
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-      })
-    };
-    return this.http.get(url , httpOptions);
+
+  getProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${environment.apiUrl}/get/products`);
   }
+
 }

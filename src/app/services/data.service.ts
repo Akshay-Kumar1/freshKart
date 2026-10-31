@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { CartModel } from '../models/cart.model';
 
+const CART_STORAGE_KEY = 'freshkart.cart';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,10 +15,11 @@ export class DataService {
   private productSearchSource = new BehaviorSubject('');
   productSearch$ = this.productSearchSource.asObservable();
 
-  private cartInfo = new BehaviorSubject<CartModel[]>([]);
+  private cartInfo = new BehaviorSubject<CartModel[]>(this.loadCart());
   cartItems$ = this.cartInfo.asObservable();
 
   constructor() { }
+
   changeMessage(data: any) {
     this.messageSource.next(data);
   }
@@ -38,7 +41,7 @@ export class DataService {
       return;
     }
 
-    this.cartInfo.next([...currentItems, { ...item, quantity: 1 }]);
+    this.updateCart([...currentItems, { ...item, quantity: 1 }]);
   }
 
   decreaseQuantity(itemId: number) {
@@ -56,7 +59,7 @@ export class DataService {
   }
 
   removeFromCart(itemId: number) {
-    this.cartInfo.next(this.cartInfo.getValue().filter(item => item.id !== itemId));
+    this.updateCart(this.cartInfo.getValue().filter(item => item.id !== itemId));
   }
 
   getCartItems() {
@@ -68,8 +71,35 @@ export class DataService {
   }
 
   private updateQuantity(itemId: number, quantity: number) {
-    this.cartInfo.next(this.cartInfo.getValue().map(item =>
+    this.updateCart(this.cartInfo.getValue().map(item =>
       item.id === itemId ? { ...item, quantity } : item
     ));
+  }
+
+  private updateCart(items: CartModel[]) {
+    this.cartInfo.next(items);
+    try {
+      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(items));
+    } catch (error) {
+      console.error('Unable to persist cart contents:', error);
+    }
+  }
+
+  private loadCart(): CartModel[] {
+    try {
+      const savedCart = localStorage.getItem(CART_STORAGE_KEY);
+      if (!savedCart) {
+        return [];
+      }
+
+      const cart: unknown = JSON.parse(savedCart);
+      if (!Array.isArray(cart)) {
+        throw new Error('Stored cart data is not an array');
+      }
+      return cart as CartModel[];
+    } catch (error) {
+      console.error('Unable to restore cart contents:', error);
+      return [];
+    }
   }
 }

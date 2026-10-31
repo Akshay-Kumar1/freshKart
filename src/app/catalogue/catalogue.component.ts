@@ -1,8 +1,10 @@
 import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
-import { UserServiceService } from '../services/user-service.service';
 import { Subject, takeUntil } from 'rxjs';
 import { DataService } from '../services/data.service';
+import { HttpServiceService } from '../services/http-service.service';
+import { CartModel } from '../models/cart.model';
 import { CartViewModel } from '../models/view-model/cart.view-model';
+import { Product } from '../models/product';
 import { CommonModule } from '@angular/common';
 import { FilterComponent } from '../filter/filter.component';
 import { SortComponent } from '../sort/sort.component';
@@ -19,7 +21,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 export class CatalogueComponent implements OnInit, OnDestroy {
   destroy$: Subject<boolean> = new Subject<boolean>();
-  arrayOfItems: any;
+  arrayOfItems: Product[] = [];
   itemLength: any;
   discountPrice: any;
   id: string;
@@ -27,10 +29,10 @@ export class CatalogueComponent implements OnInit, OnDestroy {
   message: any;
   noFilteredItems = false;
   searchQuery = '';
-  private filteredItems: any[] = [];
+  private filteredItems: Product[] = [];
   public vm: CartViewModel = new CartViewModel();
   constructor(
-    private userService: UserServiceService,
+    private httpService: HttpServiceService,
     private dataService: DataService,
     private changeDetector: ChangeDetectorRef,
     private translate: TranslateService
@@ -50,22 +52,35 @@ export class CatalogueComponent implements OnInit, OnDestroy {
   }
 
  public getCatalogueItems() {
-      let data = this.userService.getItems()
-      this.arrayOfItems = data;
-      this.filteredItems = data.slice();
-      this.applyProductSearch();
-      this.dataService.changeMessage(this.arrayOfItems);
-      this.itemLength = Object.keys(data).length;
-      for (let i = 0 ; i <  this.itemLength; i++) {
-        this.discountPrice = (data[i].discount * data[i].price) / 100;
-        data[i]['discountedPrice'] = data[i].price - Math.ceil(this.discountPrice);
+    this.httpService.getProducts().pipe(takeUntil(this.destroy$)).subscribe({
+      next: products => {
+        this.filteredItems = products.map(product => ({
+          ...product,
+          discountedPrice: product.price - Math.ceil(product.discount * product.price / 100)
+        }));
+        this.itemLength = this.filteredItems.length;
+        this.applyProductSearch();
+        this.dataService.changeMessage(this.filteredItems);
+      },
+      error: error => {
+        console.error('Error fetching product list:', error);
+        this.filteredItems = [];
+        this.itemLength = 0;
+        this.applyProductSearch();
       }
-
+    });
   }
   addToCart(id: number) {
     const item = this.arrayOfItems.find(element => element.id === id);
     if (item) {
-      this.dataService.addToCart(item);
+      const cartItem: CartModel = {
+        ...item,
+        name: item.translationKey,
+        discountedPrice: item.discountedPrice
+          ?? item.price - Math.ceil(item.discount * item.price / 100),
+        quantity: 1
+      };
+      this.dataService.addToCart(cartItem);
     }
   }
 

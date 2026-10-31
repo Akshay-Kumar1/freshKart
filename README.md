@@ -8,6 +8,12 @@ The project uses Angular 22.2 and requires Node.js `^22.22.3`, `^24.15.0`, or `>
 
 Run `npm start` for a development server. Open `http://localhost:4200/`; the app reloads when source files change.
 
+## Node.js backend
+
+Run `npm run start:backend` to start the backend at `http://localhost:3000`. The product catalog is available at `http://localhost:3000/api/get/products`. The backend allows requests from `http://localhost:4200` by default; set `CORS_ORIGINS` to a comma-separated list of allowed origins when using a different frontend origin. Set `PORT` to use a different backend port.
+
+`HttpServiceService` uses `http://localhost:3000/api` as its base URL and provides `get`, `post`, `put`, `patch`, and `delete` methods for API endpoints. Pass endpoint paths relative to `/api` (for example, `/products`). The current backend implements `GET /api/products`; add other routes to `server.js` before calling them.
+
 ## Build
 
 Run `npm run build` to create a production build in `dist/freshKart`.

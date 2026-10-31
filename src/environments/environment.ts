@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  mainUrl:'https://api.myjson.com/bins/qzuzi'
+  apiUrl: 'http://localhost:3000/api'
 };
 
 /*

@@ -20,10 +20,10 @@ describe('CartComponent', () => {
   });
 
   beforeEach(() => {
+    localStorage.removeItem('freshkart.cart');
     const translate = TestBed.inject(TranslateService);
     translate.setTranslation('en', { cart: { emptyTitle: 'Your cart seems empty !' } });
     translate.use('en').subscribe();
-    TestBed.inject(DataService).removeFromCart(1);
     fixture = TestBed.createComponent(CartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
